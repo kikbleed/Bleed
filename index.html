@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eeede7">
+  <title>BLEED Worldwide — Shirt Collection</title>
+  <meta name="description" content="Explore the BLEED Worldwide shirt collection. Browse the rail, turn each tee around and discover the artwork.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BLEED Worldwide — Shirt Collection">
+  <meta property="og:description" content="Seven graphic tees on the BLEED rail. Explore every print, front and back.">
+  <meta property="og:image" content="assets/grill-black-sheet.jpg">
+  <meta property="og:image:alt" content="Black BLEED Grill Tee, front and back with artwork details">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="motion.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <button id="about-link" class="nav-link" type="button">About</button>
+    <img class="wordmark" src="assets/wordmark.png" alt="BLEED">
+    <button id="collection-link" class="nav-link" type="button">Collection</button>
+  </header>
+  <main>
+    <h1 class="sr-only">BLEED Worldwide shirt collection</h1>
+    <div class="stage" id="stage" role="region" aria-label="Interactive shirt rail">
+      <div class="rail" aria-hidden="true"><i></i><i></i></div>
+      <div id="rack"></div>
+    </div>
+    <div class="selection">
+      <div class="selection-meta"><span class="indicator"></span><span id="position"></span></div>
+      <div class="selection-row">
+        <button id="previous" class="arrow" type="button" aria-label="Previous shirt">←</button>
+        <h2 id="current-name" aria-live="polite"></h2>
+        <button id="next" class="arrow" type="button" aria-label="Next shirt">→</button>
+      </div>
+      <button id="view" class="primary" type="button">View shirt <span aria-hidden="true">↗</span></button>
+    </div>
+  </main>
+  <footer aria-label="BLEED Worldwide. Established 2026. Made with love."><div class="ticker" aria-hidden="true"></div></footer>
+  <dialog id="panel" aria-labelledby="panel-title">
+    <div class="panel-head"><img src="assets/wordmark.png" alt="BLEED"><button id="close" class="close" type="button" aria-label="Close panel">Close <span aria-hidden="true">×</span></button></div>
+    <div id="panel-body"></div>
+  </dialog>
+</body>
+</html>
